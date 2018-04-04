@@ -10,4 +10,10 @@ It parses all files in the current directory and generate config.dat which is co
 
 # Prerequisites
 
-System must already installed [ffmpeg](https://www.ffmpeg.org/download.html).
+System must already installed
+
+* [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [ffmpeg](https://www.ffmpeg.org/download.html)
+
+# Usage
+Run <code>java -jar ffmpeg-concat-0.0.1-SNAPSHOT-jar-with-dependencies.jar</code>
