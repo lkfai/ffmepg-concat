@@ -14,10 +14,12 @@ class FFmpegConfig {
         if (outFile.exists()) {
             outFile.delete()
         }
-        Files.list(workDir.toPath()).filter { f -> !f.fileName.toString().matches(".*_\\d+$".toRegex()) }
+        Files.list(workDir.toPath())
+                .filter { f -> !f.fileName.toString().matches(".*_\\d+$".toRegex()) }
                 .findFirst()
                 .ifPresent { f -> throw IllegalArgumentException("Filenames must end with '_' digits, illegal file: ${f.fileName}") }
-        Files.list(workDir.toPath()).sorted { o1, o2 ->
+        Files.list(workDir.toPath())
+                .sorted { o1, o2 ->
                     val i1 = o1.fileName.toString().substringAfterLast("_").toInt()
                     val i2 = o2.fileName.toString().substringAfterLast("_").toInt()
                     if (i1 == i2) 0 else if (i1 < i2) -1 else 1
