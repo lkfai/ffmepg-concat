@@ -8,7 +8,6 @@ import java.nio.file.Files
 private val logger = KotlinLogging.logger {}
 
 class FFmpegConfig {
-
     fun generate(workDir: File, outConfig: String) {
         val outFile = File(workDir, outConfig)
         if (outFile.exists()) {
@@ -35,7 +34,6 @@ class FFmpegConfig {
 }
 
 class FFmpegRunner {
-
     @Throws(IOException::class, InterruptedException::class)
     fun spawn(workDir: String,
               outConfig: String,
