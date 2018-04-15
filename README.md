@@ -10,7 +10,7 @@ It parses all files in the current directory and generate config.dat which is co
 
 **Prerequisites**
 
-System must already installed
+These must already exist in PATH
 
 * [JDK8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [ffmpeg](https://www.ffmpeg.org/download.html)
