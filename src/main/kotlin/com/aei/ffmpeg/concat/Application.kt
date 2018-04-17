@@ -45,8 +45,7 @@ class FFmpegRunner {
             logger.error { "ffmpeg not installed, please install ffmpeg via https://ffmpeg.org/download.html" }
             return
         }
-        val ffmpegConfig = FFmpegConfig()
-        ffmpegConfig.generate(File(workDir), outConfig)
+        FFmpegConfig().generate(File(workDir), outConfig)
         pb = ProcessBuilder("ffmpeg", "-f", "concat", "-safe", "0", "-i", outConfig, "-c", "copy", "-bsf:a", "aac_adtstoasc", outFilename)
         pb.inheritIO()
         pc = pb.start()
